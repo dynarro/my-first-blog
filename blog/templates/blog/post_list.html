@@ -4,19 +4,15 @@
 	<head/>
 	<body>
     	<div>
-    		<h1><a href="">Dynarro</h1>
-    	</div>
+    		<h1><a href="/">Dynarro</h1>
+    	
+    	{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 
-    	<div>
-    		<p>published: 15.02.2016, 10:10</p>
-    		<h2><a href="">What doesn't kill makes you stronger</a></h2>
-    		<p>It’s important not to doubt of yourself, to try learning from rejections and improve yourself. It’s also important, in my opinion, not to see everything that may be going bad at the moment and, instead, remember the things that prove you’re following the right path, the goals you have achieved until now, and specially if you’re a beginner, that rejections come with the package, and it’s just a matter of time and learning.</p>
-    	</div>
-
-    	<div>
-    		<p>published: 15.02.2016, 10:14</p>
-    		<h2><a href="">Scared of asking questions?</a></h2>
-    		<p>There's not such a thing as "studpid questions", so be proud of asking those “stupid” questions, because those are the ones that make you achieve more and more knowledge, the ones that make you seem as someone who really cares about his/her learning, and the ones that will lead you to your success.</p>	
-    	</div>
     </body>
 </html>
